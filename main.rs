@@ -24,7 +24,7 @@ impl BumpAlloc {
             let tmp = self.bump;
             self.bump += size;
 
-            Ok(format!("{tmp}"))
+            Ok(format!("{}", tmp))
         } else {
             Err("OOM".into())
         }
