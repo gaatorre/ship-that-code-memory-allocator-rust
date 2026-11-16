@@ -1,1 +1,5 @@
-Game engine per-frame allocations
+ARENA 64
+ALLOC 10
+ALLOC 100
+ALLOC 10
+STATS

@@ -1,1 +1,4 @@
-Linux kernel dentry cache
+ARENA 64
+ALLOC 32
+ALLOC 32
+ALLOC 1

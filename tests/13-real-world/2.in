@@ -1,1 +1,4 @@
-Web server with thread-per-request
+ARENA 64
+ALLOC 40
+ALLOC 40
+STATS

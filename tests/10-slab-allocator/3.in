@@ -3,3 +3,4 @@ ALLOC inode
 ALLOC inode
 FREE inode 0 0
 STATS inode
+ALLOC inode

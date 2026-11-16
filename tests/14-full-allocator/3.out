@@ -1,1 +1,10 @@
 OOM
+class=16 alloc=0 free=0
+class=32 alloc=0 free=0
+class=64 alloc=0 free=0
+class=128 alloc=0 free=0
+class=256 alloc=0 free=0
+class=512 alloc=0 free=0
+class=1024 alloc=0 free=0
+class=2048 alloc=0 free=0
+bump=0/32768

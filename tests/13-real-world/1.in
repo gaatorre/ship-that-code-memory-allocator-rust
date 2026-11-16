@@ -1,1 +1,4 @@
-JSON parser for short-lived strings
+ARENA 64
+ALLOC 10
+ALLOC 20
+STATS

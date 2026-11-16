@@ -1,7 +1,6 @@
 CACHE_CREATE dentry 32 8
-CACHE_CREATE inode 128 4
+ADDR dentry 0 3
 ALLOC dentry
-ALLOC inode
-ALLOC dentry
-STATS dentry
-STATS inode
+ADDR dentry 0 3
+ADDR dentry 1 2
+ALLOC nope

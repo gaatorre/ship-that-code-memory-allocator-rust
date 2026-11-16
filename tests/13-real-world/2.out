@@ -1,1 +1,4 @@
-tcmalloc
+OK
+0:0
+1:0
+chunks=2 reserved=128 used=80 waste=48
