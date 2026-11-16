@@ -77,15 +77,15 @@ impl fmt::Display for FreeList {
             write!(f, "NULL")
         } else {
             let metadata: &mut FreeListMeta = unsafe { &mut *(self.heap as *mut FreeListMeta) };
-            write!(f, "FreeList:\n")?;
-            write!(f, "\tsize: {}\n", metadata.size)?;
-            write!(f, "\ttail: {}\n", metadata.tail)?;
-            write!(f, "\tfree-list: {}\n", metadata.free_list)?;
+            writeln!(f, "FreeList:")?;
+            writeln!(f, "\tsize: {}", metadata.size)?;
+            writeln!(f, "\ttail: {}", metadata.tail)?;
+            writeln!(f, "\tfree-list: {}", metadata.free_list)?;
             
             let mut next = metadata.free_list;
             while next != 0 {
                 let free_block: &FreeBlock = unsafe { & *(self.heap.add(next) as *const FreeBlock) };
-                write!(f, "\t\tsize: {}, next: {}, prev: {}\n", free_block.size, free_block.next, free_block.prev)?;
+                writeln!(f, "\t\tsize: {}, next: {}, prev: {}", free_block.size, free_block.next, free_block.prev)?;
                 next = free_block.next as usize;
             }
 
