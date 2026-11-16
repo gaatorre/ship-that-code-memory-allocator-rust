@@ -29,7 +29,7 @@ compile() {
   case "$LANG_SLUG" in
     c)        "$CC_BIN" -O2 -o .prog "$ENTRY" ;;
     cpp)      "$CXX_BIN" -std=c++17 -O2 -o .prog "$ENTRY" ;;
-    rust)     rustc -O -o .prog "$ENTRY" ;;
+    rust)     cargo build ;;
     java)     javac "$ENTRY" ;;
     assembly) nasm -felf64 "$ENTRY" -o .prog.o && ld .prog.o -o .prog ;;
     basic)    fbc -x .prog "$ENTRY" ;;
@@ -52,7 +52,8 @@ compile() {
 
 run_one() { # $1 = input file
   case "$LANG_SLUG" in
-    c|cpp|rust|assembly|basic|cobol|d|fortran|pascal) ./.prog < "$1" ;;
+    c|cpp|assembly|basic|cobol|d|fortran|pascal) ./.prog < "$1" ;;
+    rust) cargo run < "$1" ;;
     csharp|vbnet) mono .prog.exe < "$1" ;;
     kotlin)     java -jar .prog.jar < "$1" ;;
     python)     "$PY_BIN" "$ENTRY" < "$1" ;;
@@ -98,8 +99,8 @@ for dir in tests/${FILTER}*/; do
       pass=$((pass+1)); echo "PASS  $input"
     else
       fail=$((fail+1)); echo "FAIL  $input"
-      echo "  expected: $(head -c 200 "$expected")"
-      echo "  got:      $(printf '%s' "$actual" | head -c 200)"
+      echo -e "[*] expected:\n$(head -c 200 "$expected")"
+      echo -e "[*] got:\n$(printf '%s' "$actual" | head -c 200)"
     fi
   done
 done

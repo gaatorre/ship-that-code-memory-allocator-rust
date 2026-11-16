@@ -1,14 +1,14 @@
 {
   "course": "build-memory-allocator",
   "language": "rust",
-  "language_id": 73,
+  "language_id": 1073,
   "entrypoint": "main.rs",
   "version": 1,
-  "content_hash": "95e1b29b32339d00",
+  "content_hash": "79ce8f4f8705f149",
   "lessons": [
     {
       "slug": "why-allocator",
-      "tests_hash": "527e06190662"
+      "tests_hash": "c9ced4d9725d"
     },
     {
       "slug": "memory-layout",
@@ -16,23 +16,23 @@
     },
     {
       "slug": "free-list",
-      "tests_hash": "9ca5a92f82a6"
+      "tests_hash": "61b657bea272"
     },
     {
       "slug": "splitting",
-      "tests_hash": "15e9db33cd4b"
+      "tests_hash": "ab88da5d9bc6"
     },
     {
       "slug": "coalescing",
-      "tests_hash": "1b67326f04fc"
+      "tests_hash": "b383eb73e840"
     },
     {
       "slug": "fit-strategies",
-      "tests_hash": "21124fdf093c"
+      "tests_hash": "2f47082d1ff7"
     },
     {
       "slug": "boundary-tags",
-      "tests_hash": "ffb457cec778"
+      "tests_hash": "3dc71bdcb6ea"
     },
     {
       "slug": "size-classes",
@@ -40,15 +40,15 @@
     },
     {
       "slug": "buddy-allocator",
-      "tests_hash": "15e2c722e6e4"
+      "tests_hash": "fe8aa9e3c239"
     },
     {
       "slug": "slab-allocator",
-      "tests_hash": "5822718990ce"
+      "tests_hash": "04e65d6bede8"
     },
     {
       "slug": "thread-cache",
-      "tests_hash": "5e6f1cf92095"
+      "tests_hash": "3351c3b8980a"
     },
     {
       "slug": "fragmentation",
@@ -56,11 +56,11 @@
     },
     {
       "slug": "real-world",
-      "tests_hash": "14a06c7e10ba"
+      "tests_hash": "7f20bd426ce8"
     },
     {
       "slug": "full-allocator",
-      "tests_hash": "89b9783eeaf5"
+      "tests_hash": "db9d8a02eb72"
     }
   ]
 }

@@ -4,6 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+zerocopy = { version = "0.8", features = ["derive"] } 
+libc = { version = "0.2", default-features = false }
 
 [[bin]]
 name = "memory-allocator-rust"
